@@ -61,11 +61,11 @@ class Profile(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
-    national_code  = models.CharField(max_length=10)
+    national_code  = models.CharField(max_length=10)account_number = models.CharField(max_length=16)
     account_number = models.CharField(max_length=16)
 
-    national_card_image = models.ImageField(upload_to = 'profile/')
-    birthdate_certificate_image = models.ImageField(upload_to = 'profile/')
+    national_card_image = model.ImageField(upload_to = 'profile/')
+    birthdate_certificate_image = model.ImageField(upload_to = 'profile/')
     
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
