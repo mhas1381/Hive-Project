@@ -10,7 +10,7 @@ from django.dispatch import receiver
 class MyUserManager(BaseUserManager):
     def create_user(self, email, password, **extra_fields):
         """
-        Create and save a User with the given email and password and extra date.
+        Create and save a User with the given email and password and extra data.
         """
         if not email:
             raise ValueError(_("the Email must be set."))
@@ -22,7 +22,7 @@ class MyUserManager(BaseUserManager):
 
     def create_superuser(self, email, password, **extra_fields):
         """
-        Create and save a SuperUser with the given email and password and extra date.
+        Create and save a SuperUser with the given email and password and extra data.
         """
         extra_fields.setdefault('is_staff', True)
         extra_fields.setdefault('is_superuser', True)
