@@ -66,7 +66,7 @@ class Profile(models.Model):
     description = models.TextField()
 
     bank_account_number = models.CharField(max_length=16)
-    birth_date = models.DateField()
+    birth_date = models.DateField(null=True)
     national_card_number = models.CharField(max_length=10)
     national_card_image = models.ImageField(upload_to = 'profile/national_card/',)
    
