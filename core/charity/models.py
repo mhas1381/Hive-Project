@@ -13,7 +13,7 @@ class Advertisement(models.Model):
     category = models.ForeignKey('Category', on_delete = models.SET_NULL,null = True)
 
     estimated_amount = models.FloatField()
-    collected_amount = models.FloatField()
+    collected_amount = models.FloatField(null=True , blank=True)
     
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now = True)
